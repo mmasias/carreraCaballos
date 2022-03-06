@@ -5,7 +5,7 @@ class Carrera {
     private Turno turno;
 
     public Carrera() {
-        pista = new Pista(20);
+        pista = new Pista(20,2);
         caballos = new Caballo[2];
         caballos[0] = new Caballo(1);
         caballos[1] = new Caballo(2);
