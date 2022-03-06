@@ -5,7 +5,7 @@ public class Turno {
 
     public Turno(int i) {
         this.numeroElementos=i;
-        elTurno = (int) (Math.random()*numeroElementos);
+        elTurno = 0;
     }
 
     public void cambiar() {
@@ -25,13 +25,11 @@ public class Turno {
 
     public static void main(String[] args) {
         Turno turno;
-        for (int i = 0; i < 5; i++) {
-            turno = new Turno(2);
+        turno = new Turno(5);
+        for (int i = 0; i < 10; i++) {
             System.out.print(turno.toca());
-            System.out.print(turno.noToca());
             turno.cambiar();
-            System.out.print(turno.toca());
-            System.out.println(turno.noToca());
+
         }
     }
 
