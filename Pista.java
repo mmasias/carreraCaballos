@@ -28,7 +28,7 @@ public class Pista {
     }
 
     private boolean hayGanador(int unJugador) {
-        if (casillas[unJugador - 1][largo - 1] == unJugador) {
+        if (casillas[unJugador - 1][this.largo - 1] == unJugador) {
             return true;
         }
         return false;
