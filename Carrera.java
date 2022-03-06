@@ -9,7 +9,7 @@ class Carrera {
         caballos = new Caballo[2];
         caballos[0] = new Caballo(1);
         caballos[1] = new Caballo(2);
-        turno = new Turno();
+        turno = new Turno(2);
     }
 
     public void jugar() {

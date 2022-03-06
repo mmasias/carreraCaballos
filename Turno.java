@@ -1,13 +1,18 @@
 public class Turno {
 
     private int elTurno;
+    private int numeroElementos;
 
-    public Turno() {
-        elTurno = (int) (Math.random() + 0.5);
+    public Turno(int i) {
+        this.numeroElementos=i;
+        elTurno = (int) (Math.random()*numeroElementos);
     }
 
     public void cambiar() {
-        elTurno = this.noToca();
+        elTurno = this.elTurno+1;
+        if (elTurno>=numeroElementos) {
+            elTurno = 0;
+        }
     }
 
     public int toca() {
@@ -21,7 +26,7 @@ public class Turno {
     public static void main(String[] args) {
         Turno turno;
         for (int i = 0; i < 5; i++) {
-            turno = new Turno();
+            turno = new Turno(2);
             System.out.print(turno.toca());
             System.out.print(turno.noToca());
             turno.cambiar();
