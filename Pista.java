@@ -2,10 +2,12 @@ public class Pista {
 
     private int[][] casillas;
     private int largo;
+    private int numeroPistas;
 
-    public Pista(int longitud) {
+    public Pista(int longitud, int numeroPistas) {
         this.largo = longitud;
-        casillas = new int[2][this.largo];
+        this.numeroPistas = numeroPistas;
+        casillas = new int[numeroPistas][longitud];
     }
 
     public void mostrar() {
