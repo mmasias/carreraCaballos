@@ -1,2 +1,2 @@
 # carreraCaballos
-Una implementación de una carrera de caballos...
+Implementación de una carrera de caballos al estilo +ías ;)
