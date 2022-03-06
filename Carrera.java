@@ -4,7 +4,7 @@ class Carrera {
     private Caballo[] caballos;
     private Turno turno;
 
-    public Carrera(){
+    public Carrera() {
         pista = new Pista(20);
         caballos = new Caballo[2];
         caballos[0] = new Caballo(1);
@@ -12,16 +12,16 @@ class Carrera {
         turno = new Turno();
     }
 
-    public void jugar(){
+    public void jugar() {
         do {
             pista.mostrar();
             caballos[turno.toca()].moverse(pista);
-            turno.cambiar();            
+            turno.cambiar();
         } while (!pista.hayGanador());
         caballos[turno.noToca()].celebraVictoria();
     }
-    
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         new Carrera().jugar();
     }
 }

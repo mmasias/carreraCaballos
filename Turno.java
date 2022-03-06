@@ -2,8 +2,8 @@ public class Turno {
 
     private int elTurno;
 
-    public Turno(){
-        elTurno=(int)(Math.random()+0.5);
+    public Turno() {
+        elTurno = (int) (Math.random() + 0.5);
     }
 
     public void cambiar() {
@@ -15,12 +15,12 @@ public class Turno {
     }
 
     public int noToca() {
-        return (elTurno+1)%2;
+        return (elTurno + 1) % 2;
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Turno turno;
-        for (int i=0;i<5;i++) {
+        for (int i = 0; i < 5; i++) {
             turno = new Turno();
             System.out.print(turno.toca());
             System.out.print(turno.noToca());

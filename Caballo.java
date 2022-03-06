@@ -8,19 +8,19 @@ public class Caballo {
         this.miPosicion = 0;
     }
 
-    public int nombre(){
+    public int nombre() {
         return this.miNombre;
     }
 
     public void moverse(Pista pista) {
         int avance;
-        avance = (int)(Math.random()*3-1);
+        avance = (int) (Math.random() * 3 - 1);
         miPosicion = miPosicion + avance;
-        pista.avanzarCaballo(miPosicion,miNombre);
+        pista.avanzarCaballo(miPosicion, miNombre);
     }
 
     public void celebraVictoria() {
         System.out.println("Ha ganado " + this.miNombre);
     }
-    
+
 }
