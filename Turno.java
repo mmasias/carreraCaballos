@@ -4,13 +4,13 @@ public class Turno {
     private int numeroElementos;
 
     public Turno(int i) {
-        this.numeroElementos=i;
+        this.numeroElementos = i;
         elTurno = 0;
     }
 
     public void cambiar() {
-        elTurno = this.elTurno+1;
-        if (elTurno>=numeroElementos) {
+        elTurno = this.elTurno + 1;
+        if (elTurno >= numeroElementos) {
             elTurno = 0;
         }
     }
