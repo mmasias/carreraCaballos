@@ -24,18 +24,26 @@ public class Pista {
     }
 
     public boolean hayGanador() {
-        return this.hayGanador(1) || this.hayGanador(2);
-    }
-
-    private boolean hayGanador(int unJugador) {
-        if (casillas[unJugador - 1][this.largo - 1] == unJugador) {
-            return true;
+        for (int i=1;i<=numeroPistas;i++){
+            if (this.hayGanador(i)) {
+                return true;
+            }
         }
         return false;
     }
 
-    public void avanzarCaballo(int avance, int miNombre) {
-        this.casillas[miNombre - 1][avance] = miNombre;
+    private boolean hayGanador(int unJugador) {
+        if (this.casillas[unJugador-1][this.largo-1] == unJugador) {
+            return true;
+        } else {
+            return false;
+        }
+        
+    }
+
+    public void avanzarCaballo(int miPosicion, int miNombre) {
+        if (miPosicion>=this.largo-1) {miPosicion=this.largo-1;}
+        this.casillas[miNombre - 1][miPosicion] = miNombre;
     }
 
 }
